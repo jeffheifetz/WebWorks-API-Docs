@@ -1245,17 +1245,51 @@
 						</table>
 					</if>
 					
-					<if test="member.returns.length">
-						<br/>
-						<div class="title">Returns</div>
-						<table class="scriptTable">
-						<for each="item" in="member.returns">
-							<tr><td class="scriptTd">
-							<pre>{+resolveLinks(item.desc)+}</pre>
-							</td></tr>
-						</for>
-						</table>
-					</if>
+<if test="member.returns.length">
+                        <br/>
+                        <div class="title">Returns</div>
+                        The returned object will always have three attributes; code, msg and data. The table below explains their relationship.
+                        <table class="confluenceTable">
+                            <tr>
+                            <th class="confluenceTh">
+                               code
+                               
+                            </th>
+                            <th class="confluenceTh">
+                               msg
+                               
+                            </th>
+                            <th class="confluenceTh">
+                               Data
+                               
+                            </th>
+                            <th class="confluenceTh">
+                               Results
+                               
+                            </th>
+                            </tr>
+                            <tr>
+                                   <td class="confluenceTd">0</td>
+                                   <td class="confluenceTd">null</td>
+                                   <td class="confluenceTd"><b>!</b>null</td>
+                                   <td class="confluenceTd">Call completed successfully</td>
+                            </tr>
+                            <tr>
+                                   <td class="confluenceTd">1</td>
+                                   <td class="confluenceTd"><b>!</b>null</td>
+                                   <td class="confluenceTd">null</td>
+                                   <td class="confluenceTd">An error occurred, please check the msg value</td>
+                            </tr>
+                        </table>
+                        A sample returned object would look like this:
+                        <table class="scriptTable">
+                        <for each="item" in="member.returns">
+                            <tr><td class="scriptTd">
+                            <pre>{+resolveLinks(item.desc)+}</pre>
+                            </td></tr>
+                        </for>
+                        </table>
+                    </if>
 					
 					
 					<if test="member.example.length">

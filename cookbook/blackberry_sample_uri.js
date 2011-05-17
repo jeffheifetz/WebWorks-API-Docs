@@ -24,7 +24,7 @@ blackberry.sampleURI = {
          * @uri 
          * @PB10
          * @description The objects in hasPermission will always be ALLOW (0). They will correspond to all the entries in the whitelist. If they are not whitelisted, they are omitted from the list. Similarly, all of the objects in hasCapability will be true, otherwise they will be omitted.
-         * @returns 
+         * @returns {JSON}
          * {
          *     "data":{
          *         "hasCapability":[
